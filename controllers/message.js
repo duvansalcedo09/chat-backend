@@ -12,6 +12,21 @@ exports.create = function (req, res) {
   });
 };
 
+exports.getToFrom = function (req, res) {
+  Message.getAll(
+    {
+      $or: [{ to: req.params.to }, { from: req.params.to }],
+    },
+    function (err, result) {
+      if (!err) {
+        return res.json(result);
+      } else {
+        return res.send(err); // 500 error
+      }
+    }
+  );
+};
+
 /** getCompany function to get Message by id. */
 exports.get = function (req, res) {
   Message.get({ _id: req.params.id }, function (err, result) {

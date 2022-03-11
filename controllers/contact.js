@@ -13,11 +13,12 @@ exports.create = function (req, res) {
         let x = {
           name: req.body.name,
           email: req.body.email,
-          user: user._id,
+          userTo: user._id,
+          userFrom: req.body.userFrom,
         };
-        Contact.create(x, function (err, result) {
-          console.log(user);
-          if (!err) {
+        Contact.create(x, function (error, result) {
+          console.log(error);
+          if (!error) {
             return res.json({ success: true, data: result });
           } else {
             return res.json({ success: false, msg: "Error al crear contacto" }); // 500 error
