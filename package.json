@@ -1,0 +1,30 @@
+{
+  "name": "chat-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.0.0",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cookie-parser": "^1.4.3",
+    "cors": "*",
+    "epayco-node": "0.0.5",
+    "express": "*",
+    "firebase-admin": "^8.9.2",
+    "jsonwebtoken": "*",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "mongoose": "*",
+    "morgan": "^1.8.2",
+    "node-cron": "^2.0.3",
+    "passport": "*",
+    "passport-jwt": "*",
+    "randomstring": "^1.1.5",
+    "sendgrid": "^5.2.2"
+  }
+}
